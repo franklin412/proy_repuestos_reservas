@@ -1,0 +1,165 @@
+{
+  "_version": "1.65.0",
+  "sap.app": {
+    "id": "zproject.repuestos",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.15.0",
+      "toolsId": "6c73a2a8-596f-4759-9faf-9a5c6d01c798"
+    },
+    "dataSources": {
+      "repuestosmodel": {
+        "uri": "/srv_repuestos/v2/api/v1",
+        "type": "OData",
+        "settings": {
+            "odataVersion": "2.0",
+            "localUri": "localService/metadata.xml"
+        }
+      },
+      "repuestosmodelLocal": {
+        "uri": "/v2/api/v1",
+        "type": "OData",
+        "settings": {
+            "odataVersion": "2.0",
+            "localUri": "localService/metadata.xml"
+        }
+      }
+    },
+    "crossNavigation": {
+      "inbounds": {
+          "zproject-repuestos-inbound": {
+              "signature": {
+                  "parameters": {},
+                  "additionalParameters": "allowed"
+              },
+              "semanticObject": "zreservarepuestos",
+              "action": "display",
+              "title": "Reserva repuestos",
+              "icon": "sap-icon://activity-2"
+          }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.128.1",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "zproject.repuestos.i18n.i18n"
+        }
+      },
+			"localModel": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/localModel.json"
+			},
+      "repuestosmodel": {
+          "dataSource": "repuestosmodel",
+          "preload": true,
+          "settings": {
+              "operationMode": "Server",
+              "groupId": "$direct",
+              "synchronizationMode": "None",
+              "autoExpandSelect": true,
+              "updateGroupId": "updateGroup",
+              "useBatch": false,
+              "preliminaryContext": true
+          }
+      },
+      "repuestosmodelLocal": {
+          "dataSource": "repuestosmodelLocal",
+          "preload": true,
+          "settings": {
+              "operationMode": "Server",
+              "groupId": "$direct",
+              "synchronizationMode": "None",
+              "autoExpandSelect": true,
+              "updateGroupId": "updateGroup",
+              "useBatch": false,
+              "preliminaryContext": true
+          }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "zproject.repuestos.view",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "clearControlAggregation": false
+      },
+      "routes": [
+        {
+          "name": "RouteHome",
+          "pattern": ":?query:",
+          "target": [
+            "TargetHome"
+          ]
+        }
+      ],
+      "targets": {
+        "TargetHome": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Home",
+          "viewName": "Home"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "zproject.repuestos.view.Home",
+      "type": "XML",
+      "async": true,
+      "id": "Home"
+    }
+  },
+  "sap.cloud": {
+    "public": true,
+    "service": "zprojectrepuestos"
+  }
+}

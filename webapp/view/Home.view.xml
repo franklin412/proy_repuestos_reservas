@@ -1,0 +1,26 @@
+<mvc:View controllerName="zproject.repuestos.controller.Home" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m"  
+	xmlns:u="sap.ui.unified"
+xmlns:html="http://www.w3.org/1999/xhtml" xmlns:core="sap.ui.core">
+	<Shell>
+		<App id="Home">
+			<Page title="{i18n>title}">
+		        <content>
+					<u:FileUploader
+						id="dfileUploader"
+						change="onFinishUpload"
+						tooltip="Upload your file to the local server"
+						uploadComplete="handleUploadComplete"/>
+					<Button text="Guardar Imagen" press="onGuardarImagen" />
+					<!-- <Button text="Guardar Maquina" press="onGuardarMaquinas" /> -->
+					<!-- <core:HTML preferDOM="true"
+						content="&lt;br/&gt; &lt;canvas id=&quot;idSignature&quot; value=&quot;{gutierrez>/arrcanvas}&quot; width=&quot;700&quot; height=&quot;400&quot; class=&quot;signature-pad&quot;&gt; &lt;/canvas&gt;"></core:HTML>           
+		            
+		            <Button text="rectangulo" press="rectangulo" />
+		            <Button text="triangulo" press="triangulo" />
+		            <Button text="circulo" press="circulo" />
+		            <Button text="capture" press="onCapturePhoto" /> -->
+		        </content>
+		    </Page>
+		</App>
+	</Shell>
+</mvc:View>
