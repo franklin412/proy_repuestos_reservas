@@ -5,7 +5,7 @@ sap.ui.getCore().attachInit(function () {
 	"use strict";
 
 	sap.ui.require([
-		"zproject/repuestos/test/unit/AllTests"
+		"zproject/reservas/test/unit/AllTests"
 	], function () {
 		QUnit.start();
 	});

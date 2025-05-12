@@ -4,7 +4,7 @@ sap.ui.define([
 ], function (Controller,service) {
     "use strict";
     var isLocal = true;
-    return Controller.extend("zproject.repuestos.controller.BaseController", {
+    return Controller.extend("zproject.reservas.controller.BaseController", {
         // onAprobarButtonMain: async function (oEvent) {
         //     getBinding = oEvent.getSource().getBindingContext("localModel");
         //     detalle = false;

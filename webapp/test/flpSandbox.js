@@ -40,7 +40,7 @@ sap.ui.define([
 								"tileType": "sap.ushell.ui.tile.StaticTile",
 								"properties": {
 									"title": "App Title",
-									"targetURL": "#zprojectrepuestos-display"
+									"targetURL": "#zprojectreservas-display"
 								}
 							}]
 						}]
@@ -51,8 +51,8 @@ sap.ui.define([
 				"adapter": {
 					"config": {
 						"inbounds": {
-							"zprojectrepuestos-display": {
-								"semanticObject": "zprojectrepuestos",
+							"zprojectreservas-display": {
+								"semanticObject": "zprojectreservas",
 								"action": "display",
 								"description": "An SAP Fiori application.",
 								"title": "App Title",
@@ -61,8 +61,8 @@ sap.ui.define([
 								},
 								"resolutionResult": {
 									"applicationType": "SAPUI5",
-									"additionalInformation": "SAPUI5.Component=zproject.repuestos",
-									"url": sap.ui.require.toUrl("zproject/repuestos")
+									"additionalInformation": "SAPUI5.Component=zproject.reservas",
+									"url": sap.ui.require.toUrl("zproject/reservas")
 								}
 							}
 						}

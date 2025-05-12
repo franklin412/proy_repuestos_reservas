@@ -1,7 +1,7 @@
 {
   "_version": "1.65.0",
   "sap.app": {
-    "id": "zproject.repuestos",
+    "id": "zproject.reservas",
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "applicationVersion": {
@@ -81,7 +81,7 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "zproject.repuestos.i18n.i18n"
+          "bundleName": "zproject.reservas.i18n.i18n"
         }
       },
 			"localModel": {
@@ -127,7 +127,7 @@
         "routerClass": "sap.m.routing.Router",
         "viewType": "XML",
         "async": true,
-        "viewPath": "zproject.repuestos.view",
+        "viewPath": "zproject.reservas.view",
         "controlAggregation": "pages",
         "controlId": "app",
         "clearControlAggregation": false
@@ -152,7 +152,7 @@
       }
     },
     "rootView": {
-      "viewName": "zproject.repuestos.view.Home",
+      "viewName": "zproject.reservas.view.Home",
       "type": "XML",
       "async": true,
       "id": "Home"
@@ -160,6 +160,6 @@
   },
   "sap.cloud": {
     "public": true,
-    "service": "zprojectrepuestos"
+    "service": "zprojectreservas"
   }
 }

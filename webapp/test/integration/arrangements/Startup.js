@@ -14,7 +14,7 @@ sap.ui.define([
 			// start the app UI component
 			this.iStartMyUIComponent({
 				componentConfig: {
-					name: "zproject.repuestos",
+					name: "zproject.reservas",
 					async: true
 				},
 				hash: oOptions.hash,

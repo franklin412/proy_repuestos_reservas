@@ -7,7 +7,7 @@ sap.ui.define([
 
 	Opa5.extendConfig({
 		arrangements: new Startup(),
-		viewNamespace: "zproject.repuestos.view.",
+		viewNamespace: "zproject.reservas.view.",
 		autoWait: true
 	});
 });

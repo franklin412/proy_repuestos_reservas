@@ -5,12 +5,12 @@
 sap.ui.define([
         "sap/ui/core/UIComponent",
         "sap/ui/Device",
-        "zproject/repuestos/model/models"
+        "zproject/reservas/model/models"
     ],
     function (UIComponent, Device, models) {
         "use strict";
 
-        return UIComponent.extend("zproject.repuestos.Component", {
+        return UIComponent.extend("zproject.reservas.Component", {
             metadata: {
                 manifest: "json"
             },

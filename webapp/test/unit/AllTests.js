@@ -1,5 +1,5 @@
 sap.ui.define([
-	"zproject/repuestos/test/unit/controller/Home.controller"
+	"zproject/reservas/test/unit/controller/Home.controller"
 ], function () {
 	"use strict";
 });

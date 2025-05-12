@@ -5,7 +5,7 @@ sap.ui.define(
     function(BaseController) {
       "use strict";
   
-      return BaseController.extend("zproject.repuestos.controller.App", {
+      return BaseController.extend("zproject.reservas.controller.App", {
         onInit: function() {
         }
       });

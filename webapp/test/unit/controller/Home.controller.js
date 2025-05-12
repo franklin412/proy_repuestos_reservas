@@ -1,7 +1,7 @@
 /*global QUnit*/
 
 sap.ui.define([
-	"zproject/repuestos/controller/Home.controller"
+	"zproject/reservas/controller/Home.controller"
 ], function (Controller) {
 	"use strict";
 
